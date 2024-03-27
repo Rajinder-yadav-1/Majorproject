@@ -25,13 +25,12 @@
       <br>
 
 
-      <!-- <input type="hidden" name="listing[image]" value="<%= listing.image.url %>"> -->
 
       <div class="mb-3">
         <label for="image" class="form-label">Image</label>
-        <input name="image" value="<%= listing.image.url %>"  required class="form-control" type="text">
+        <input name="listing[image]" value="<%= listing.image %>"  required class="form-control" type="text">
         <div class="invalid-feedback">Image should be required</div>
-        <img src="<%= listing.image.url %>" alt="Current Image" style="max-width: 100%; height: auto;">
+        <img src="<%= listing.image %>" alt="Current Image" style="max-width: 100%; height: auto;">
       </div>
       <br>
 
