@@ -14,7 +14,7 @@ const upload = multer({stroage})
 //index Route
 router.route("/")
 .get(  wrapAsync(listingController.Index))
-// .post(validateListing, wrapAsync(listingController.createListing));
+//.post(isLoggedIn ,validateListing, wrapAsync(listingController.createListing));
 .post(upload.single('listing[image]') ,(req,res) =>{
     res.send(req.file)
 })
